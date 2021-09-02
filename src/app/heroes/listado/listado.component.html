@@ -1,0 +1,20 @@
+<h1>Listado de Héroes</h1>
+
+<div *ngIf="heroeBorrado; else noBorrado"> <!-- Una altra instrucció ng. *ngIf comprova si succeeix algo, en aquest cas si la variable heroeBorrado no està buit, mostrarà l'heroi esborrat -->
+    <h3>Héroe Borrado <small>{{heroeBorrado}}</small></h3>
+</div>
+
+<ng-template #noBorrado> <!-- ng-template és propi d'Angular que mostra un contingut basat en una condició. En aquet cas, l'if d'adalt -->
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index"> <!-- Fem un for per recórrer l'array heroes del component.ts amb l'instrucció *ngFor. També podem incloure in iteador (i) -->
+        {{i+1}} - {{heroe}}
+    </li>
+</ul>
+
