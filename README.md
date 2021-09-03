@@ -1,5 +1,5 @@
 
-npm i al descargar el proyecto para complementar los módulos de Node.
+npm i al descargar el proyecto para añadir los módulos de Node de la aplicación.
 
 Aplicación desplegada en el siguiente sitio web:
 https://primera-aplicacion-angular.netlify.app/
