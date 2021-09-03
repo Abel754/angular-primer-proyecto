@@ -1,0 +1,24 @@
+<h3>Agregar</h3>
+<hr>
+
+<!-- ngModel -> Evita que es refresqui el navegador i assigna el que escrivim a nuevo.nombre -->
+<form (ngSubmit)="agregar()"> <!-- ngSubmit ve junt amb FormsModule importat a dbz.module.ts. Farà que al fer click en el botó del formulari, no es faci un refresh del navegador -->
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre" 
+    >  <!-- el ngModel fa el mateix qeu aquestes línees d'abaix -->
+        <!-- [value]="nuevo.nombre" 
+        (input)="cambiarNombre($event)"  -->
+    <!-- Es poden agafar valors del component.ts amb el [value] i el nom de la propietat de la classe -->
+    <!-- $event ve propi amb angular, és per enviar l'event al succeïr l'acció input o qualsevol altra (input canvia al canviar el valor)-->
+    <input
+        type="number" 
+        placeholder="Poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+    >
+
+    <button class="btn btn-primary">Agregar</button>
+</form>

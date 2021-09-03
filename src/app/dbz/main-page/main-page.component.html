@@ -1,0 +1,16 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-personajes></app-personajes>
+    </div>
+
+    <div class="col">
+        <!-- Posem nuevo perquè és el nom de la propietat del component fill (agregar.component) i l'altre personajes és la propietat que portem del pare (també nuevo) -->
+        <!-- Cridem l'event onNuevoPersonaje creat al component fill agregar.component.ts i li passem sempre el $event (propi d'Angular) -->
+        <app-agregar 
+            [nuevo]="nuevo"
+        ></app-agregar>
+    </div>
+</div>
